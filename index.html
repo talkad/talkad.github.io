@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        
         <title>talkad projects</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="src/counter.js"> </script>
+        
     </head>
-
+ 
     <body>
-        first commit
+        <!-- This is the main page of the website -->
+        <div class="alert alert-primary" role="alert" id="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="closeAlert()">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            
+            <h4 class="alert-heading">Welcome!</h4>
+            <p>Hello and welcome to my git page! Here you will find some details about me and a description of my projects.</p>
+            <p>I hope you will find this page useful. </p>
+            <hr>
+            <p class="mb-0">Make sure you gave a star on one of my repos ;)</p>
+            </div>
+
+        <h1>talkad git page</h1>
+
+        <div class="card" style="width: 18rem;" id="card">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/e0/d3/62/tucan-del-minizoologico.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">About me...</h5>
+                <p class="card-text">My name is Tal Kadosh and I'm a student for software engineering at BGU university</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Origin country: Israel</li>
+                <li class="list-group-item">Hobbies: basketball, playing the guitar and code</li>
+            </ul>
+            <div class="card-body">
+                <a href="https://github.com/talkad" class="card-link">my repos</a>
+            </div>
+            </div>
+
+            <a id="button" href="todoList.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">TO-DO</a>
     </body>
 </html>

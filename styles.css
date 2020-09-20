@@ -1,0 +1,27 @@
+body {
+    background-color: lavender;
+    border: 2px;
+    margin: 10px;
+    border-style: solid;
+    border-color: dodgerblue;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#card {
+    text-align: center;
+    margin-left: 40%;
+}
+
+a {
+    margin: auto;
+}
+
+#button {
+    margin: 10px;
+    margin-left: 45%;
+}

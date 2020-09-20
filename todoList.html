@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>TO-DO List</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            document.addEventListener('DOMContentLoaded',  function() {
+                
+                // By default, the submit button is disabled
+                document.querySelector('#submit').disabled = true;
+
+                document.querySelector('#task').onkeyup = () => {
+                    if(document.querySelector('#task').value.length > 0){
+                        document.querySelector('#submit').disabled = false;
+                    }
+                    else{
+                        document.querySelector('#submit').disabled = true;
+                    }
+
+                }
+                
+                document.querySelector('form').onsubmit = () => {
+                    const task = document.querySelector('#task').value;
+
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
+
+                    document.querySelector('#tasks').append(li);
+
+                    document.querySelector('#task').value = '';
+                    document.querySelector('#submit').disabled = true;
+
+                    // stop form drom submitting
+                    return false;
+                }
+            });
+         </script>
+        
+    </head>
+ 
+    <body>
+        <h1>TO-DO List</h1>
+        <ul id="tasks">          
+        </ul>
+
+        <form>
+            <input id="task" placeholder="New Task" type="text">
+            <input id="submit" type="submit">
+        </form>
+
+    </body>
+</html>
